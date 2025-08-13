@@ -1,6 +1,6 @@
 import { useState } from "react";
 import credentials from '../../data/credentials.json'
-import "./WelcomePage.css";
+import "./Welcome.css";
 import { useNavigate } from "react-router-dom";
 
 const WelcomePage = () => {

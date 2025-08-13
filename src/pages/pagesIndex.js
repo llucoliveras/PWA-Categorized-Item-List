@@ -1,4 +1,4 @@
 import Test from "./Test.js";
-import WelcomePage from "./WelcomePage/WelcomePage.js";
+import Welcome from "./Welcome/Welcome.js";
 
 export { Test, WelcomePage }

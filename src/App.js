@@ -1,7 +1,7 @@
 import MainNavbar from "./components/MainNavbar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { Test, WelcomePage } from "./pages/index";
+import { Test, Welcome } from "./pages/pagesIndex";
 import './App.css';
 
 const AppLayout = () => {
@@ -17,7 +17,7 @@ const AppLayout = () => {
         <>
             {showNavbar && <MainNavbar />}
             <Routes>
-                <Route path='/' element={<WelcomePage />} />
+                <Route path='/' element={<Welcome />} />
                 <Route path='/test' element={<Test />} />
                 <Route path="*" element={<h1>404 Not Found</h1>} />
             </Routes>

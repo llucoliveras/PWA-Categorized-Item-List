@@ -1,14 +1,16 @@
 import { useState } from "react";
 import credentials from '../../data/credentials.json'
 import "./WelcomePage.css";
+import { useNavigate } from "react-router-dom";
 
 const WelcomePage = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
+    const navigate = useNavigate()
     const parsedCredentials = Object.entries(credentials).map(([_idx, data]) => { return data })
 
-    const handleLogin = () => {
+    const handleLogin = async () => {
         if (!username || !password) {
             setMessage("Please enter both username and password.");
             return;
@@ -17,6 +19,8 @@ const WelcomePage = () => {
         if (parsedCredentials.some(user => user.username === username && user.password === password )) {
             setMessage("✅ Login successful!");
             localStorage.setItem("user", JSON.stringify(parsedCredentials.find(user => user.username === username && user.password === password )))
+            await new Promise(res => setTimeout(res, 500))
+            navigate("/home")
         } else {
             setMessage("❌ Invalid username or password.");
         }

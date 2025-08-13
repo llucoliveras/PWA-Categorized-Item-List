@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pwa-categorized-item-list/static/css/main.24d36891.css",
+    "main.js": "/pwa-categorized-item-list/static/js/main.8d614dcd.js",
+    "static/js/453.29ca5525.chunk.js": "/pwa-categorized-item-list/static/js/453.29ca5525.chunk.js",
+    "index.html": "/pwa-categorized-item-list/index.html",
+    "main.24d36891.css.map": "/pwa-categorized-item-list/static/css/main.24d36891.css.map",
+    "main.8d614dcd.js.map": "/pwa-categorized-item-list/static/js/main.8d614dcd.js.map",
+    "453.29ca5525.chunk.js.map": "/pwa-categorized-item-list/static/js/453.29ca5525.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24d36891.css",
+    "static/js/main.8d614dcd.js"
+  ]
+}

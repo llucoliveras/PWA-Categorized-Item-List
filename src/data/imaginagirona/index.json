@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Primera Sala",
+        "pathname": "./primera_sala"
+    },
+    {
+        "name": "Segona Sala",
+        "pathname": "./segona_sala"
+    },
+    {
+        "name": "Tercera Sala",
+        "pathname": "./tercera_sala"
+    }
+]

@@ -14,7 +14,7 @@ const Home = ({ savedUserLoginData }) => {
     useEffect(() => {
         const fetchData = async (fileName) => {
             try {
-                const res = await fetch(`/data/${fileName}.json`);
+                const res = await fetch(`./data/${fileName}.json`);
                 if (!res.ok) throw new Error("File not found");
                 const data = await res.json();
                 setPath([data]);

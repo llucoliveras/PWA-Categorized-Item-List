@@ -10,7 +10,7 @@ const WelcomePage = ({ setSavedUserLoginData }) => {
     useEffect(() => {
         const fetchCredentials = async () => {
             try {
-                const res = await fetch(`/data/credentials.json`);
+                const res = await fetch(`./data/credentials.json`);
                 if (!res.ok) throw new Error("File not found");
                 const data = await res.json();
                 setCredentials(data);

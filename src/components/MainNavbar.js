@@ -27,7 +27,7 @@ const MainNavbar = ({ savedUserLoginData, onLogout }) => {
                 </Button>
 
                 <div className="fw-bold text-center flex-grow-1">
-                    {currentList?.name == "root" ? savedUserLoginData.username : currentList?.name}
+                    {currentList?.name === "root" ? savedUserLoginData.username : currentList?.name}
                 </div>
 
                 <Button variant="outline-danger" onClick={onLogout}>

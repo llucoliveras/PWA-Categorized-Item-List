@@ -9,7 +9,6 @@ const Home = ({ savedUserLoginData }) => {
         setPath,
         currentList,
         setCurrentList,
-        setPreviousList,
     } = useDataNavigatorContext()
 
     useEffect(() => {
@@ -33,10 +32,9 @@ const Home = ({ savedUserLoginData }) => {
         if (!path) return
 
         if (path.length >= 1) {
-            setPreviousList(currentList)
             setCurrentList(path[path.length - 1])
         }
-    }, [path, setCurrentList])
+    }, [path, currentList, setCurrentList])
 
     const goDeeper = (node) => {
         if (node.items) {

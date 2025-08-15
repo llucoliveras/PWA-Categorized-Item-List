@@ -5,7 +5,6 @@ const DataNavigatorContext = createContext();
 export const DataNavigatorProvider = ({children}) => {
     const [path, setPath] = useState(null)
     const [currentList, setCurrentList] = useState(null)
-    const [previousList, setPreviousList] = useState(null)
 
     return (
         <DataNavigatorContext.Provider value={{
@@ -13,8 +12,6 @@ export const DataNavigatorProvider = ({children}) => {
             setPath,
             currentList,
             setCurrentList,
-            previousList,
-            setPreviousList
         }}>
             {children}
         </DataNavigatorContext.Provider>

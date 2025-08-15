@@ -1,43 +1,47 @@
 import MainNavbar from "./components/MainNavbar";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate, useNavigate } from "react-router-dom";
 import { Test, Welcome, Home } from "./pages/pagesIndex";
 import './App.css';
-
-const AppLayout = () => {
-	const savedUserLoginData = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : null;
-    const location = useLocation();
-
-    console.log(savedUserLoginData)
-
-    // Check if we are NOT on the welcome page
-    const showNavbar = !savedUserLoginData && location.pathname !== "/";
-
-    const PrivateRoute = ({ children }) => {
-        return savedUserLoginData ? children : <Navigate to="/"/>
-    }
-
-	return (
-        <>
-            {showNavbar && <MainNavbar />}
-            <Routes>
-                <Route path='/' element={<Welcome />} />
-                <Route path='/home' element={<PrivateRoute><Home savedUserLoginData={savedUserLoginData}/></PrivateRoute>} />
-                <Route path='/test' element={<Test />} />
-                <Route path="*" element={<h1>404 Not Found</h1>} />
-            </Routes>
-        </>
-	);
-}
+import { DataNavigatorProvider } from "./components/DataNavigatorContext";
 
 const App = () => {
-    return (
-        <div className="app-container"> 
-            <Router>
-                <AppLayout />
-            </Router>
-        </div>
-    )
-}
+	const savedUserLoginData = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : null;
+
+	const PrivateRoute = ({ children }) => {
+		return savedUserLoginData ? children : <Navigate to="/" />
+	}
+
+	const AppContent = () => {
+		const location = useLocation();
+		const showNavbar = location.pathname !== "/";
+		const navigate = useNavigate()
+
+		const onLogout = () => {
+			localStorage.removeItem("user")
+			navigate('/')
+		}
+
+		return (
+			<div className="app">
+				<DataNavigatorProvider>
+					{showNavbar && <MainNavbar savedUserLoginData={savedUserLoginData} currentListName={"currentListName"} onBack={onBack} onLogout={onLogout} />}
+					<Routes>
+						<Route path='/' element={<Welcome />} />
+						<Route path='/home' element={<PrivateRoute><Home savedUserLoginData={savedUserLoginData} /></PrivateRoute>} />
+						<Route path='/test' element={<Test />} />
+						<Route path="*" element={<h1>404 Not Found</h1>} />
+					</Routes>
+				</DataNavigatorProvider>
+			</div>
+		);
+	};
+
+	return (
+		<Router>
+			<AppContent />
+		</Router>
+	);
+};
 
 export default App;

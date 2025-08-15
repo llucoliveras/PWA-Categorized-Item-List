@@ -1,5 +1,4 @@
-import { useState } from "react";
-import credentials from '../../data/credentials.json'
+import { useEffect, useState } from "react";
 import "./Welcome.css";
 import { useNavigate } from "react-router-dom";
 
@@ -7,8 +6,23 @@ const WelcomePage = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
+    const [credentials, setCredentials] = useState(null)
     const navigate = useNavigate()
-    const parsedCredentials = Object.entries(credentials).map(([_idx, data]) => { return data })
+
+    useEffect(() => {
+        const fetchCredentials = async () => {
+            try {
+                const res = await fetch(`/data/credentials.json`);
+                if (!res.ok) throw new Error("File not found");
+                const data = await res.json();
+                setCredentials(data);
+            } catch (err) {
+                console.error(err);
+            }
+        };
+
+        fetchCredentials()
+    }, [])
 
     const handleLogin = async () => {
         if (!username || !password) {
@@ -16,9 +30,9 @@ const WelcomePage = () => {
             return;
         }
 
-        if (parsedCredentials.some(user => user.username === username && user.password === password )) {
+        if (credentials.some(user => user.username === username && user.password === password )) {
             setMessage("✅ Login successful!");
-            localStorage.setItem("user", JSON.stringify(parsedCredentials.find(user => user.username === username && user.password === password )))
+            localStorage.setItem("user", JSON.stringify(credentials.find(user => user.username === username && user.password === password )))
             await new Promise(res => setTimeout(res, 500))
             navigate("/home")
         } else {

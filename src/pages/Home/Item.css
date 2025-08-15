@@ -1,0 +1,24 @@
+
+
+.list-item {
+    flex: 1;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+}
+
+/* .list-item:hover {
+    cursor: pointer;
+    background-color: #f8f9fa;
+} */
+
+.center-title .item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical */
+    align-items: center;     /* horizontal */
+    text-align: center;
+    height: 100%;
+}

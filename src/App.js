@@ -4,9 +4,19 @@ import { BrowserRouter as Router, Routes, Route, useLocation, Navigate, useNavig
 import { Welcome, Home } from "./pages/pagesIndex";
 import './App.css';
 import { DataNavigatorProvider } from "./components/DataNavigatorContext";
+import { useEffect, useState } from "react";
 
 const App = () => {
-	const savedUserLoginData = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : null;
+	const [savedUserLoginData, setSavedUserLoginData] = useState(null)
+
+	useEffect(() => {
+		const user = localStorage.getItem("user")
+		if (!user) return
+
+		setSavedUserLoginData(JSON.parse(user))
+	}, [setSavedUserLoginData])
+
+	console.log(savedUserLoginData)
 
 	const PrivateRoute = ({ children }) => {
 		return savedUserLoginData ? children : <Navigate to="/" />
@@ -19,6 +29,7 @@ const App = () => {
 
 		const onLogout = () => {
 			localStorage.removeItem("user")
+			setSavedUserLoginData(null)
 			navigate('/')
 		}
 
@@ -27,7 +38,7 @@ const App = () => {
 				<DataNavigatorProvider>
 					{showNavbar && <MainNavbar savedUserLoginData={savedUserLoginData} currentListName={"currentListName"} onLogout={onLogout} />}
 					<Routes>
-						<Route path='/' element={<Welcome />} />
+						<Route path='/' element={savedUserLoginData ? <Navigate to="/home" /> : <Welcome setSavedUserLoginData={setSavedUserLoginData} />} />
 						<Route path='/home' element={<PrivateRoute><Home savedUserLoginData={savedUserLoginData} /></PrivateRoute>} />
 						<Route path="*" element={<h1>404 Not Found</h1>} />
 					</Routes>

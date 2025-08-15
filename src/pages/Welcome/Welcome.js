@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 import "./Welcome.css";
-import { useNavigate } from "react-router-dom";
 
-const WelcomePage = () => {
+const WelcomePage = ({ setSavedUserLoginData }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
     const [credentials, setCredentials] = useState(null)
-    const navigate = useNavigate()
 
     useEffect(() => {
         const fetchCredentials = async () => {
@@ -32,9 +30,10 @@ const WelcomePage = () => {
 
         if (credentials.some(user => user.username === username && user.password === password )) {
             setMessage("✅ Login successful!");
-            localStorage.setItem("user", JSON.stringify(credentials.find(user => user.username === username && user.password === password )))
             await new Promise(res => setTimeout(res, 500))
-            navigate("/home")
+            const foundCredentials = credentials.find(user => user.username === username && user.password === password )
+            setSavedUserLoginData(foundCredentials)
+            localStorage.setItem("user", JSON.stringify(foundCredentials))
         } else {
             setMessage("❌ Invalid username or password.");
         }

@@ -22,7 +22,7 @@ const WelcomePage = ({ setSavedUserLoginData }) => {
         fetchCredentials()
     }, [])
 
-    const handleLogin = async (user = username, pass = password) => {
+    const handleLogin = async (user, pass) => {
         user = user.trim();
         pass = pass.trim();
 
@@ -44,12 +44,8 @@ const WelcomePage = ({ setSavedUserLoginData }) => {
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
-            handleLogin()
+            handleLogin(username, password)
         }
-    }
-
-    const handleExampleLogin = () => {
-        handleLogin("example", "example");
     }
 
     return (
@@ -75,13 +71,13 @@ const WelcomePage = ({ setSavedUserLoginData }) => {
                     onKeyDown={handleKeyDown}
                 />
 
-                <button className="welcome-button" onClick={handleLogin}>
+                <button className="welcome-button" onClick={() => {handleLogin(username, password)}}>
                     Log In
                 </button>
 
                 {message && <p className="welcome-message">{message}</p>}
 
-                <p className="example-login-text" onClick={handleExampleLogin}>
+                <p className="example-login-text" onClick={() => {handleLogin("example", "example")}}>
                     Try an example of this app
                 </p>
             </div>

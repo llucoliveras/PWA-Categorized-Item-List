@@ -23,6 +23,9 @@ const WelcomePage = ({ setSavedUserLoginData }) => {
     }, [])
 
     const handleLogin = async (user = username, pass = password) => {
+        user = user.trim();
+        pass = pass.trim();
+
         if (!user || !pass) {
             setMessage("Please enter both username and password.");
             return;

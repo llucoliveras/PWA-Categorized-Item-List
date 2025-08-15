@@ -9,7 +9,6 @@ const MainNavbar = ({ savedUserLoginData, onLogout }) => {
     } = useDataNavigatorContext()
 
     const goBack = () => {
-        console.log(path)
         if (path.length > 1) {
             setPath(prev => prev.slice(0, -1))
         }

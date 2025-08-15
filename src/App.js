@@ -1,7 +1,7 @@
 import MainNavbar from "./components/MainNavbar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate, useNavigate } from "react-router-dom";
-import { Test, Welcome, Home } from "./pages/pagesIndex";
+import { Welcome, Home } from "./pages/pagesIndex";
 import './App.css';
 import { DataNavigatorProvider } from "./components/DataNavigatorContext";
 
@@ -25,11 +25,10 @@ const App = () => {
 		return (
 			<div className="app">
 				<DataNavigatorProvider>
-					{showNavbar && <MainNavbar savedUserLoginData={savedUserLoginData} currentListName={"currentListName"} onBack={onBack} onLogout={onLogout} />}
+					{showNavbar && <MainNavbar savedUserLoginData={savedUserLoginData} currentListName={"currentListName"} onLogout={onLogout} />}
 					<Routes>
 						<Route path='/' element={<Welcome />} />
 						<Route path='/home' element={<PrivateRoute><Home savedUserLoginData={savedUserLoginData} /></PrivateRoute>} />
-						<Route path='/test' element={<Test />} />
 						<Route path="*" element={<h1>404 Not Found</h1>} />
 					</Routes>
 				</DataNavigatorProvider>

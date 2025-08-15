@@ -42,3 +42,15 @@
   font-size: 0.9rem;
   color: #333;
 }
+
+.example-login-text {
+  color: gray;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.example-login-text:hover {
+  color: #555;
+}

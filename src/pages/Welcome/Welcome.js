@@ -22,16 +22,16 @@ const WelcomePage = ({ setSavedUserLoginData }) => {
         fetchCredentials()
     }, [])
 
-    const handleLogin = async () => {
-        if (!username || !password) {
+    const handleLogin = async (user = username, pass = password) => {
+        if (!user || !pass) {
             setMessage("Please enter both username and password.");
             return;
         }
 
-        if (credentials.some(user => user.username === username && user.password === password )) {
+        if (credentials?.some(userObj => userObj.username === user && userObj.password === pass)) {
             setMessage("✅ Login successful!");
             await new Promise(res => setTimeout(res, 500))
-            const foundCredentials = credentials.find(user => user.username === username && user.password === password )
+            const foundCredentials = credentials.find(userObj => userObj.username === user && userObj.password === pass)
             setSavedUserLoginData(foundCredentials)
             localStorage.setItem("user", JSON.stringify(foundCredentials))
         } else {
@@ -43,6 +43,10 @@ const WelcomePage = ({ setSavedUserLoginData }) => {
         if (event.key === 'Enter') {
             handleLogin()
         }
+    }
+
+    const handleExampleLogin = () => {
+        handleLogin("example", "example");
     }
 
     return (
@@ -73,6 +77,10 @@ const WelcomePage = ({ setSavedUserLoginData }) => {
                 </button>
 
                 {message && <p className="welcome-message">{message}</p>}
+
+                <p className="example-login-text" onClick={handleExampleLogin}>
+                    Try an example of this app
+                </p>
             </div>
         </div>
     );

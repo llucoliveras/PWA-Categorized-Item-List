@@ -1,142 +1,142 @@
 {
-    "id": "root",
-    "name": "Home Renovation",
-    "items": [
+  "id": "1",
+  "name": "Home Renovation",
+  "items": [
+    {
+      "id": "1-1",
+      "name": "Living Room",
+      "items": [
         {
-            "id": "root-1",
-            "name": "Living Room",
-            "items": [
+          "id": "1-1-1",
+          "name": "Furniture",
+          "items": [
+            {
+              "id": "1-1-1-1",
+              "name": "Sofa",
+              "description": "Choose color, material, and size."
+            },
+            {
+              "id": "1-1-1-2",
+              "name": "Coffee Table",
+              "items": [
                 {
-                    "id": "living-1",
-                    "name": "Furniture",
-                    "items": [
-                        {
-                            "id": "living-1-1",
-                            "name": "Sofa",
-                            "text": "Choose color, material, and size."
-                        },
-                        {
-                            "id": "living-1-2",
-                            "name": "Coffee Table",
-                            "items": [
-                                {
-                                    "id": "living-1-2-1",
-                                    "name": "Material Options",
-                                    "items": [
-                                        { "id": "living-1-2-1-1", "name": "Oak", "text": "Sturdy and classic." },
-                                        { "id": "living-1-2-1-2", "name": "Walnut", "text": "Rich dark wood." },
-                                        { "id": "living-1-2-1-3", "name": "Pine", "text": "Lightweight and affordable." },
-                                        { "id": "living-1-2-1-4", "name": "Metal", "text": "Modern industrial style." },
-                                        { "id": "living-1-2-1-5", "name": "Glass", "text": "Elegant and minimalist." }
-                                    ]
-                                },
-                                {
-                                    "id": "living-1-2-2",
-                                    "name": "Shape Options",
-                                    "items": [
-                                        { "id": "living-1-2-2-1", "name": "Round" },
-                                        { "id": "living-1-2-2-2", "name": "Square" },
-                                        { "id": "living-1-2-2-3", "name": "Rectangular" },
-                                        { "id": "living-1-2-2-4", "name": "Oval" },
-                                        { "id": "living-1-2-2-5", "name": "Hexagon" }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "id": "living-1-3",
-                            "name": "Bookshelves",
-                            "items": [
-                                { "id": "living-1-3-1", "name": "Tall" },
-                                { "id": "living-1-3-2", "name": "Short" },
-                                { "id": "living-1-3-3", "name": "Corner" },
-                                { "id": "living-1-3-4", "name": "Wall-mounted" },
-                                { "id": "living-1-3-5", "name": "Freestanding" }
-                            ]
-                        }
-                    ]
+                  "id": "1-1-1-2-1",
+                  "name": "Material Options",
+                  "items": [
+                    { "id": "1-1-1-2-1-1", "name": "Oak", "description": "Sturdy and classic." },
+                    { "id": "1-1-1-2-1-2", "name": "Walnut", "description": "Rich dark wood." },
+                    { "id": "1-1-1-2-1-3", "name": "Pine", "description": "Lightweight and affordable." },
+                    { "id": "1-1-1-2-1-4", "name": "Metal", "description": "Modern industrial style." },
+                    { "id": "1-1-1-2-1-5", "name": "Glass", "description": "Elegant and minimalist." }
+                  ]
                 },
                 {
-                    "id": "living-2",
-                    "name": "Lighting",
-                    "items": [
-                        { "id": "living-2-1", "name": "Ceiling Light", "text": "Select LED, chandelier, or flush mount." },
-                        {
-                            "id": "living-2-2",
-                            "name": "Lamp Options",
-                            "items": [
-                                { "id": "living-2-2-1", "name": "Floor lamp" },
-                                { "id": "living-2-2-2", "name": "Table lamp" },
-                                { "id": "living-2-2-3", "name": "Wall sconce" },
-                                { "id": "living-2-2-4", "name": "Pendant lamp" },
-                                { "id": "living-2-2-5", "name": "Smart lamp" }
-                            ]
-                        }
-                    ]
+                  "id": "1-1-1-2-2",
+                  "name": "Shape Options",
+                  "items": [
+                    { "id": "1-1-1-2-2-1", "name": "Round" },
+                    { "id": "1-1-1-2-2-2", "name": "Square" },
+                    { "id": "1-1-1-2-2-3", "name": "Rectangular" },
+                    { "id": "1-1-1-2-2-4", "name": "Oval" },
+                    { "id": "1-1-1-2-2-5", "name": "Hexagon" }
+                  ]
                 }
-            ]
+              ]
+            },
+            {
+              "id": "1-1-1-3",
+              "name": "Bookshelves",
+              "items": [
+                { "id": "1-1-1-3-1", "name": "Tall" },
+                { "id": "1-1-1-3-2", "name": "Short" },
+                { "id": "1-1-1-3-3", "name": "Corner" },
+                { "id": "1-1-1-3-4", "name": "Wall-mounted" },
+                { "id": "1-1-1-3-5", "name": "Freestanding" }
+              ]
+            }
+          ]
         },
         {
-            "id": "root-2",
-            "name": "Kitchen",
-            "items": [
+          "id": "1-1-2",
+          "name": "Lighting",
+          "items": [
+            { "id": "1-1-2-1", "name": "Ceiling Light", "description": "Select LED, chandelier, or flush mount." },
+            {
+              "id": "1-1-2-2",
+              "name": "Lamp Options",
+              "items": [
+                { "id": "1-1-2-2-1", "name": "Floor lamp" },
+                { "id": "1-1-2-2-2", "name": "Table lamp" },
+                { "id": "1-1-2-2-3", "name": "Wall sconce" },
+                { "id": "1-1-2-2-4", "name": "Pendant lamp" },
+                { "id": "1-1-2-2-5", "name": "Smart lamp" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1-2",
+      "name": "Kitchen",
+      "items": [
+        {
+          "id": "1-2-1",
+          "name": "Cabinets",
+          "items": [
+            {
+              "id": "1-2-1-1",
+              "name": "Upper Cabinets",
+              "items": [
+                { "id": "1-2-1-1-1", "name": "White" },
+                { "id": "1-2-1-1-2", "name": "Beige" },
+                { "id": "1-2-1-1-3", "name": "Grey" },
+                { "id": "1-2-1-1-4", "name": "Blue" },
+                { "id": "1-2-1-1-5", "name": "Green" }
+              ]
+            },
+            {
+              "id": "1-2-1-2",
+              "name": "Lower Cabinets",
+              "items": [
                 {
-                    "id": "kitchen-1",
-                    "name": "Cabinets",
-                    "items": [
-                        {
-                            "id": "kitchen-1-1",
-                            "name": "Upper Cabinets",
-                            "items": [
-                                { "id": "kitchen-1-1-1", "name": "White" },
-                                { "id": "kitchen-1-1-2", "name": "Beige" },
-                                { "id": "kitchen-1-1-3", "name": "Grey" },
-                                { "id": "kitchen-1-1-4", "name": "Blue" },
-                                { "id": "kitchen-1-1-5", "name": "Green" }
-                            ]
-                        },
-                        {
-                            "id": "kitchen-1-2",
-                            "name": "Lower Cabinets",
-                            "items": [
-                                {
-                                    "id": "kitchen-1-2-1",
-                                    "name": "Drawers",
-                                    "items": [
-                                        { "id": "kitchen-1-2-1-1", "name": "Soft-close" },
-                                        { "id": "kitchen-1-2-1-2", "name": "Regular" },
-                                        { "id": "kitchen-1-2-1-3", "name": "Deep drawers" },
-                                        { "id": "kitchen-1-2-1-4", "name": "Shallow drawers" },
-                                        { "id": "kitchen-1-2-1-5", "name": "Hidden drawers" }
-                                    ]
-                                },
-                                {
-                                    "id": "kitchen-1-2-2",
-                                    "name": "Pantry Section",
-                                    "items": [
-                                        { "id": "kitchen-1-2-2-1", "name": "Pull-out Shelves" },
-                                        { "id": "kitchen-1-2-2-2", "name": "Lazy Susan" },
-                                        { "id": "kitchen-1-2-2-3", "name": "Vertical Dividers" },
-                                        { "id": "kitchen-1-2-2-4", "name": "Bins" },
-                                        { "id": "kitchen-1-2-2-5", "name": "Wire baskets" }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
+                  "id": "1-2-1-2-1",
+                  "name": "Drawers",
+                  "items": [
+                    { "id": "1-2-1-2-1-1", "name": "Soft-close" },
+                    { "id": "1-2-1-2-1-2", "name": "Regular" },
+                    { "id": "1-2-1-2-1-3", "name": "Deep drawers" },
+                    { "id": "1-2-1-2-1-4", "name": "Shallow drawers" },
+                    { "id": "1-2-1-2-1-5", "name": "Hidden drawers" }
+                  ]
                 },
                 {
-                    "id": "kitchen-2",
-                    "name": "Appliances",
-                    "items": [
-                        { "id": "kitchen-2-1", "name": "Refrigerator" },
-                        { "id": "kitchen-2-2", "name": "Oven & Stove" },
-                        { "id": "kitchen-2-3", "name": "Microwave" },
-                        { "id": "kitchen-2-4", "name": "Dishwasher" },
-                        { "id": "kitchen-2-5", "name": "Coffee Machine" }
-                    ]
+                  "id": "1-2-1-2-2",
+                  "name": "Pantry Section",
+                  "items": [
+                    { "id": "1-2-1-2-2-1", "name": "Pull-out Shelves" },
+                    { "id": "1-2-1-2-2-2", "name": "Lazy Susan" },
+                    { "id": "1-2-1-2-2-3", "name": "Vertical Dividers" },
+                    { "id": "1-2-1-2-2-4", "name": "Bins" },
+                    { "id": "1-2-1-2-2-5", "name": "Wire baskets" }
+                  ]
                 }
-            ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "1-2-2",
+          "name": "Appliances",
+          "items": [
+            { "id": "1-2-2-1", "name": "Refrigerator" },
+            { "id": "1-2-2-2", "name": "Oven & Stove" },
+            { "id": "1-2-2-3", "name": "Microwave" },
+            { "id": "1-2-2-4", "name": "Dishwasher" },
+            { "id": "1-2-2-5", "name": "Coffee Machine" }
+          ]
         }
-    ]
+      ]
+    }
+  ]
 }

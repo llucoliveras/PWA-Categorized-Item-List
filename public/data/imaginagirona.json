@@ -3,172 +3,172 @@
     "name": "Selva Negra",
     "items": [
         {
-            "id": "root-1",
+            "id": "1",
             "name": "Primera Sala",
             "items": [
                 {
-                    "id": "primera-1",
+                    "id": "1-1",
                     "name": "1. INTRODUCCIÓ"
                 },
                 {
-                    "id": "primera-2",
+                    "id": "1-1-1",
                     "name": "Pistes Generals",
                     "items": [
                         {
-                            "id": "1.1",
+                            "id": "1-1-1-1",
                             "name": "1.1 AUDIO PISTA ASSEGUTS",
-                            "text": "Humans, que feu asseguts encara, el temps juga en contra vostra!"
+                            "description": "Humans, que feu asseguts encara, el temps juga en contra vostra!"
                         },
                         {
-                            "id": "1.2",
+                            "id": "1-1-1-2",
                             "name": "1.2 PARETS NOVA",
-                            "text": "Seguiu buscant per altres parets"
+                            "description": "Seguiu buscant per altres parets"
                         },
                         {
-                            "id": "1.3",
+                            "id": "1-1-1-3",
                             "name": "1.3 AUDIO PISTA AJUPIU",
-                            "text": "No cal que us ajupiu"
+                            "description": "No cal que us ajupiu"
                         },
                         {
-                            "id": "1.4",
+                            "id": "1-1-1-4",
                             "name": "1.4 AUDIO PISTA RES",
-                            "text": "Allà no heu de trobar res, ja heu aconseguit superar aquesta part!"
+                            "description": "Allà no heu de trobar res, ja heu aconseguit superar aquesta part!"
                         }
                     ]
                 },
                 {
-                    "id": "primera-3",
+                    "id": "1-1-2",
                     "name": "Cercle Giratori",
                     "items": [
                         {
-                            "id": "1.5",
+                            "id": "1-1-2-1",
                             "name": "1.5 AUDIO PISTA CERCLE 1",
-                            "text": "Humans, tres cercles teniu, pero nomes hi ha un recorregut, alinieu-los bé i una sorpresa tindreu"
+                            "description": "Humans, tres cercles teniu, pero nomes hi ha un recorregut, alinieu-los bé i una sorpresa tindreu"
                         },
                         {
-                            "id": "1.5.1",
+                            "id": "1-1-2-2",
                             "name": "1.5.1 AUDIO PISTA CERCLE 2",
-                            "text": "Humans, cadascun dels cercles té 4 entrades i 4 sortides, recordeu que si treballeu junts tot serà més fàcil"
+                            "description": "Humans, cadascun dels cercles té 4 entrades i 4 sortides, recordeu que si treballeu junts tot serà més fàcil"
                         },
                         {
-                            "id": "1.5.2",
+                            "id": "1-1-2-3",
                             "name": "1.5.2 AUDIO PISTA CERCLE 3",
-                            "text": "Alguna cosa ha caigut a una cantonada, busqueu bé!"
+                            "description": "Alguna cosa ha caigut a una cantonada, busqueu bé!"
                         },
                         {
-                            "id": "1.5.3",
+                            "id": "1-1-2-4",
                             "name": "1.5.3 AUDIO PISTA RODA ESQUERRA",
-                            "text": "La roda de l'esquerra ja la teniu bé"
+                            "description": "La roda de l'esquerra ja la teniu bé"
                         },
                         {
-                            "id": "1.5.4",
+                            "id": "1-1-2-5",
                             "name": "1.5.4 AUDIO PISTA RODA DRETA",
-                            "text": "La roda de la dreta ja la teniu bé"
+                            "description": "La roda de la dreta ja la teniu bé"
                         },
                         {
-                            "id": "1.5.5",
+                            "id": "1-1-2-6",
                             "name": "1.5.5 AUDIO PISTA RODA MIG",
-                            "text": "La roda del mig ja la teniu bé"
+                            "description": "La roda del mig ja la teniu bé"
                         }
                     ]
                 },
                 {
-                    "id": "primera-4",
+                    "id": "1-1-3",
                     "name": "Fruites",
                     "items": [
                         {
-                            "id": "1.6",
+                            "id": "1-1-3-1",
                             "name": "1.6 AUDIO FRUITES 1",
-                            "text": "Humans, recordeu que heu d'utilitzar tots els vostres sentits!"
+                            "description": "Humans, recordeu que heu d'utilitzar tots els vostres sentits!"
                         },
                         {
-                            "id": "1.6.1",
+                            "id": "1-1-3-2",
                             "name": "1.6.1 AUDIO FRUITES 2",
-                            "text": "\"Mico, a tu com t'agrada menjar-te la fruita?\" \"Jo sempre començo per una pera i acabo per una mandarina!\""
+                            "description": "\"Mico, a tu com t'agrada menjar-te la fruita?\" \"Jo sempre començo per una pera i acabo per una mandarina!\""
                         },
                         {
-                            "id": "1.6.2",
+                            "id": "1-1-3-3",
                             "name": "1.6.2 AUDIO PISTA OLOR",
-                            "text": "No creieu que fan bona olor aquestes caixes?"
+                            "description": "No creieu que fan bona olor aquestes caixes?"
                         }
                     ]
                 },
                 {
-                    "id": "primera-5",
+                    "id": "1-1-4",
                     "name": "Campanes",
                     "items": [
                         {
-                            "id": "1.7",
+                            "id": "1-1-4-1",
                             "name": "1.7 AUDIO CAMPANES",
-                            "text": "Humans, ara és l'hora de ser com un lloro i repetir la seqüencia musical!"
+                            "description": "Humans, ara és l'hora de ser com un lloro i repetir la seqüencia musical!"
                         },
                         {
-                            "id": "1.7.1",
+                            "id": "1-1-4-2",
                             "name": "1.7.1 AUDIO COLORS 1",
-                            "text": "L'ordre dels colors és: blau, groc, vermell, verd"
+                            "description": "L'ordre dels colors és: blau, groc, vermell, verd"
                         },
                         {
-                            "id": "1.7.2",
+                            "id": "1-1-4-3",
                             "name": "1.7.2 AUDIO COLORS 2",
-                            "text": "L'ordre dels colors és: blau, groc, vermell, verd, groc, verd"
+                            "description": "L'ordre dels colors és: blau, groc, vermell, verd, groc, verd"
                         },
                         {
-                            "id": "1.7.3",
+                            "id": "1-1-4-4",
                             "name": "1.7.3 AUDIO COLORS 3",
-                            "text": "L'ordre dels colors és: blau, groc, vermell, verd, groc, verd, vermell i groc"
+                            "description": "L'ordre dels colors és: blau, groc, vermell, verd, groc, verd, vermell i groc"
                         }
                     ]
                 }
             ]
         },
         {
-            "id": "root-2",
+            "id": "2",
             "name": "Segona Sala",
             "items": [
                 {
-                    "id": "segona-1",
+                    "id": "2-1",
                     "name": "2. ENTRADA SEGONA SALA",
-                    "text": "Persones, esteu entrant a la cavana dels lladres. Es veu que aquí han amagat l'anima de la selva, no serà fàcil, hi han objectes molt humans!"
+                    "description": "Persones, esteu entrant a la cavana dels lladres. Es veu que aquí han amagat l'anima de la selva, no serà fàcil, hi han objectes molt humans!"
                 },
                 {
-                    "id": "segona-2",
+                    "id": "2-2",
                     "name": "Pistes Generals",
                     "items": []
                 },
                 {
-                    "id": "segona-3",
+                    "id": "2-3",
                     "name": "Auriculars",
                     "items": []
                 },
                 {
-                    "id": "segona-4",
+                    "id": "2-4",
                     "name": "Forats",
                     "items": []
                 },
                 {
-                    "id": "segona-5",
+                    "id": "2-5",
                     "name": "Laberint Clau",
                     "items": []
                 },
                 {
-                    "id": "segona-6",
+                    "id": "2-6",
                     "name": "Gàbies Animals",
                     "items": []
                 },
                 {
-                    "id": "segona-7",
+                    "id": "2-7",
                     "name": "Caixa Forta",
                     "items": []
                 },
                 {
-                    "id": "segona-8",
+                    "id": "2-8",
                     "name": "Ànima",
                     "items": []
                 }
             ]
         },
         {
-            "id": "root-3",
+            "id": "3",
             "name": "Tercera Sala",
             "items": []
         }

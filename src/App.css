@@ -1,11 +1,20 @@
 html, body {
     margin: 0;
     padding: 0;
-    background: #111; /* optional, looks like phone background */
 }
 
-.app {
+.app-container {
     display: flex;
     flex-direction: column;
     height: 100dvh;
+}
+
+.app-container.light {
+  background-color: #fff;
+  color: #000;
+}
+
+.app-container.dark {
+  background-color: #121212;
+  color: #f1f1f1;
 }

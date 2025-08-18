@@ -5,9 +5,11 @@ import { Welcome, Home } from "./pages/pagesIndex";
 import './App.css';
 import { DataNavigatorProvider } from "./components/DataNavigatorContext";
 import { useEffect, useState } from "react";
+import { useSettings } from "./components/SettingsContext";
 
 const App = () => {
 	const [savedUserLoginData, setSavedUserLoginData] = useState(null)
+	const { theme, fontSize } = useSettings()
 
 	useEffect(() => {
 		const user = localStorage.getItem("user")
@@ -15,8 +17,6 @@ const App = () => {
 
 		setSavedUserLoginData(JSON.parse(user))
 	}, [setSavedUserLoginData])
-
-	console.log(savedUserLoginData)
 
 	const PrivateRoute = ({ children }) => {
 		return savedUserLoginData ? children : <Navigate to="/" />
@@ -34,7 +34,14 @@ const App = () => {
 		}
 
 		return (
-			<div className="app">
+			<div
+				className={`app-container ${theme}`}
+				style={{
+					fontSize:
+						fontSize === "small" ? "14px" :
+						fontSize === "large" ? "18px" : "16px"
+				}}
+			>
 				<DataNavigatorProvider>
 					{showNavbar && <MainNavbar savedUserLoginData={savedUserLoginData} currentListName={"currentListName"} onLogout={onLogout} />}
 					<Routes>

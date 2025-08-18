@@ -5,21 +5,21 @@ const WelcomePage = ({ setSavedUserLoginData }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState("");
-    const [credentials, setCredentials] = useState(null)
+    const [users, setUsers] = useState(null)
 
     useEffect(() => {
-        const fetchCredentials = async () => {
+        const fetchUsers = async () => {
             try {
-                const res = await fetch(`./data/credentials.json`);
+                const res = await fetch(`./data/users.json`);
                 if (!res.ok) throw new Error("File not found");
                 const data = await res.json();
-                setCredentials(data);
+                setUsers(data);
             } catch (err) {
                 console.error(err);
             }
         };
 
-        fetchCredentials()
+        fetchUsers()
     }, [])
 
     const handleLogin = async (user, pass) => {
@@ -31,12 +31,12 @@ const WelcomePage = ({ setSavedUserLoginData }) => {
             return;
         }
 
-        if (credentials?.some(userObj => userObj.username === user && userObj.password === pass)) {
+        if (users?.some(userObj => userObj.username === user && userObj.password === pass)) {
             setMessage("✅ Login successful!");
             await new Promise(res => setTimeout(res, 500))
-            const foundCredentials = credentials.find(userObj => userObj.username === user && userObj.password === pass)
-            setSavedUserLoginData(foundCredentials)
-            localStorage.setItem("user", JSON.stringify(foundCredentials))
+            const foundUser = users.find(userObj => userObj.username === user && userObj.password === pass)
+            setSavedUserLoginData(foundUser)
+            localStorage.setItem("user", JSON.stringify(foundUser))
         } else {
             setMessage("❌ Invalid username or password.");
         }

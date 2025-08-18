@@ -2,16 +2,16 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #ccc;
-    padding: 8px;
-    flex: 1 0 auto;
+    padding: 4px;
+    flex: 10 0 auto;
     height: auto;
-    min-height: 80px;
 }
 
 .item-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center; /* vertical */
     align-items: center;     /* horizontal */
     text-align: center;
+    padding: 8px;
 }
